@@ -1,0 +1,6 @@
+RpmMeter KEYWORD1
+RPM	KEYWORD1
+initialize	KEYWORD2
+getRpm	KEYWORD2
+getRpmFloat	KEYWORD2
+
