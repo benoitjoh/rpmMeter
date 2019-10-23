@@ -45,7 +45,6 @@ class RpmMeter
         byte signals_per_turn;       // how many singnals we receive during on turn
         byte samples_amount;       // how many samples shall be accumulated=
         byte samples_cnt;          // singnals counter
-        long max_turn_mics;         // if cycle is longer than this, we assume no rotation at all
         unsigned long rpm_factor; // conversion factor from mysecs to rpm;
 
     protected:
