@@ -45,14 +45,14 @@ setup
 to get the rpm value just call getRpm()
 
 ```c++
-myRoundsPerMinute = getRpm()
+myRoundsPerMinute = RPM.getRpm()
 ```
 ### getMicrosPerTurn() ###
 
 you can also get the time (in microseconds) that is needed for one turn.
 
 ```c++
-myRoundsPerMinute = getMicrosPerTurn()
+myRoundsPerMinute = RPM.getMicrosPerTurn()
 ```
 
 
