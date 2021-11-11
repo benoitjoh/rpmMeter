@@ -16,11 +16,6 @@
   LiquidCrystal_SR2W lcd(PIN_LCD_DATA, PIN_LCD_CLK ,POSITIVE);
 #endif // USE_LCD
 
-#include <LatchControl.h>
-#define CLOCKPIN 9
-
-LatchControl latch(CLOCKPIN, MODE_1W);
-
 
 
 int rpmValue = 0;
@@ -28,8 +23,8 @@ long int microsPerTurn = 0;
 void setup()
 {
   RPM.initialize(PIN_SIGNAL, SIG_PER_TURN, SAMPLES_COUNT);
-#ifdef USE_LCD
 
+#ifdef USE_LCD
   lcd.begin(16,2);               // initialize the lcd
   lcd.home();                   // go home
   lcd.setBacklight(1);
@@ -62,14 +57,14 @@ void loop()
     microsPerTurn = RPM.getMicrosPerTurn();
 
   #ifdef USE_LCD
-    //lcd.home();
-    //lcd.print("rpm" + leftFill(String(rpmValue), 10, " ") + " ");
-    lcd.print("r");
-    //lcd.setCursor(0,1);
-    //lcd.print("myS/U" + leftFill(String(microsPerTurn), 8, " ") + " ");
+    lcd.home();
+    lcd.print("rpm" + leftFill(String(rpmValue), 10, " ") + " ");
+    lcd.setCursor(0,1);
+    lcd.print("myS/U" + leftFill(String(microsPerTurn), 8, " ") + " ");
   #endif // USE_LCD
+    
     delay(100);
-    Serial.print(leftFill(String(rpmValue), 6, " ")  + "\n");
+    Serial.print(leftFill(String(rpmValue), 6, " ")  + " rpm\n");
 
 }
 

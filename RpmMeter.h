@@ -1,7 +1,7 @@
 // **************************************************************************
 //
 // library to encapsulate measurement of turnarounds
-// pin 2 or 3 can be used as an input pin for a signal from a e.g. hallsensor
+// pin 2 or 3 can be used as an input pin for a signal from a light- or hallsensor e.g.
 // or anything else that gives one peak each turn
 //
 // example of usage:
@@ -11,7 +11,7 @@
 //
 // void setup()
 // {
-// RPM.initialize(PIN_SIGNAL); // RpmMeter
+// RPM.initialize(PIN_SIGNAL, 1, 1); // RpmMeter
 // }
 //
 // //access value like this:
